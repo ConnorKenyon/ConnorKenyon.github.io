@@ -18,6 +18,26 @@
             color: #fff; /* Header text color */
             padding: 1rem;
         }
+        .navbar {
+            overflow: hidden;
+            background-color: #34495e; /* Dark gray navbar background */
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .navbar a:hover {
+            background-color: #2c3e50; /* Darker gray on hover */
+        }
+        .navbar a.active {
+            background-color: #1abc9c; /* Mint green for active link */
+            color: #fff;
+        }
         .content {
             max-width: 800px;
             margin: 2rem auto;
@@ -31,9 +51,15 @@
             background-color: #34495e; /* Dark gray footer background */
             color: #fff; /* Footer text color */
             padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .navbar a {
+                float: none;
+                display: block;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -44,27 +70,42 @@
            University of Massachusetts Dartmouth</p>
     </div>
 
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <!-- <a href="#blog">Blog</a> -->
+        <a href="#contact">Contact</a>
+    </div>
     <div class="content">
         <h2>About Me</h2>
         <p>Welcome to my personal website! I am Connor Kenyon, a Research Computing Facilitator at the University of Massachusetts Dartmouth. I assist researchers with their computational needs and facilitate access to high-performance computing resources.</p>
 
         <h2>Contact Information</h2>
-        <p>Email: connor.kenyon@umassd.edu<br>
-           Phone: +1234567890<br>
-           LinkedIn: <a href="https://www.linkedin.com/in/connorkenyon" target="_blank">linkedin.com/in/connorkenyon</a></p>
+        <p>Email: ckenyon@umassd.edu<br>
+           LinkedIn: <a href="https://www.linkedin.com/in/ckenyon/" target="_blank">linkedin.com/in/ckenyon</a></p>
 
         <h2>Skills</h2>
-        <p>High-Performance Computing, Data Analysis, Research Support, Programming (Python, R), Linux System Administration</p>
+        <p>High-Performance Computing, Data Analysis, Research Support, Programming (Python, C++, Fortran), </p>
 
         <h2>Projects</h2>
         <p>Currently involved in supporting various research projects at UMass Dartmouth. Details available upon request.</p>
 
         <h2>Education</h2>
-        <p>Bachelor of Science in Computer Science, University of Massachusetts Dartmouth</p>
+        <ul>
+          <li>University of Massachusetts Dartmouth, Ph.D., (Engineering and Applied Science - In Progress)</li>
+          <li>University of Massachusetts Dartmouth, M.S., (Physics 2021)</li>
+          <ul>
+            <li>Thesis: Overcoming Limitations of GPGPU in Scientific Computing</li>
+            <li>Thesis Advisor: Dr. Gaurav Khanna</li>
+          </ul>
+        <li>University of Massachusetts Dartmouth, B.S., (Physics 2018)</li>
+        </ul>
     </div>
 
     <div class="footer">
-        <p>&copy; 2024 Connor Kenyon. All rights reserved.</p>
+        <p>&copy; 2024 Connor Kenyon.</p>
     </div>
 </body>
 </html>
